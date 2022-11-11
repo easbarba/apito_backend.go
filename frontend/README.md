@@ -1,4 +1,4 @@
-# Apito | Frontend
+# Apito | Front-end
 
 Evaluate soccer referees' performance.
 

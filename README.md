@@ -4,8 +4,7 @@ Evaluate soccer referees' performance.
 
 ## Container
 
-A compose container file is also available to easy the development start up,
-also found in the ops folder.
+A compose container file is available to easy the development start up.
 
     $ docker-compose down 
 

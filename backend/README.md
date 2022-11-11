@@ -1,6 +1,4 @@
-# Apito
-
-Evaluate soccer referees' performance.
+# Apito | Back-end
 
 ## Installation
 
