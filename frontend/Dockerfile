@@ -3,7 +3,7 @@ MAINTAINER EAS Barbosa <easbarba@outlook.com>
 
 WORKDIR /app
 
-COPY package.json package.json.lock .
+COPY package.json package-lock.json .
 
 RUN npm install
 

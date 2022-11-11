@@ -17,14 +17,6 @@ spec:
 build:
 	go build -o apito .
 
-compose:
-	podman-compose -f ops/docker-compose.yml down
-	podman-compose -f ops/docker-compose.yml up --detach
-
-compose-build:
-	podman-compose -f ops/docker-compose.yml down
-	podman-compose -f ops/docker-compose.yml up --detach --build
-
 watch:
 	CompileDaemon --command="./apito"
 
