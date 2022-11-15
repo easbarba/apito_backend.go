@@ -4,12 +4,10 @@ import (
 	"os"
 
 	"github.com/gin-gonic/gin"
-
-	"github.com/easbarba/apito/initializers"
 )
 
 func init() {
-	initializers.LoadEnvVariables()
+
 }
 
 func main() {

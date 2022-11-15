@@ -1,4 +1,4 @@
-FROM golang:1.19-alpine AS build
+FROM golang:1.19-alpine AS builder
 MAINTAINER EAS Barbosa <easbarba@outlook.com>
 
 WORKDIR /app
@@ -11,6 +11,11 @@ COPY . .
 ENV GOOS=linux
 ENV GOARCH=amd64
 
-RUN go build -o apito .
+RUN go build -o ./apito .
 
-CMD [ "/app/apito" ]
+# FINAL STAGE
+FROM golang:1.19-alpine
+
+COPY --from=builder /app/apito /apito
+
+ENTRYPOINT [ "/apito" ]

@@ -5,10 +5,10 @@ services:
     build:
       context: ./backend/
       dockerfile: Dockerfile
-    working_dir: /app
     volumes:
       - .:/app
-    env_file: ./backend/.env
+    env_file:
+      - ./backend/.env
     ports:
       - 8080:8080
     expose:
@@ -20,13 +20,17 @@ services:
     build:
       context: ./frontend/
       dockerfile: Dockerfile
-    working_dir: /app
-    env_file: ./backend/.env
+    env_file:
+      - ./frontend/.env
+    ports:
+      - 7000:7000
+    expose:
+      - 7000
 
   database:
     image: docker.io/mongo:6
-    env_file:
-      - ./backend/.env
+    env_file: 
+      .env
     ports:
       - 27017:27017
     volumes:
