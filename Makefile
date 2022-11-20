@@ -17,10 +17,13 @@ watch:
 backend:
 	sudo podman build --tag easbarba/apito:latest ./backend
 
-backend:
+frontend:
 	sudo podman build --tag easbarba/apito:latest ./frontend
 
 podman:
 	sudo systemctl enable --now podman.socket
 	sudo ln -fs /run/podman/podman.sock /var/run/docker.sock
 	sudo podman network create podman
+
+dev:
+	sudo podman push easbarbosa/apito:latest
