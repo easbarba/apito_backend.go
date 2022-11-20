@@ -3,7 +3,7 @@ kind: Simple
 metadata:
   name: apito
 servers: 1
-agents: 3
+agents: 2
 ports:
   - port: 8080:30080
     nodeFilters:

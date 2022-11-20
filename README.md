@@ -4,12 +4,23 @@ Evaluate soccer referees' performance.
 
 ## Container
 
-A compose container file is available to easy the development start up.
+`Apito` development relies on containers you can start up with:
 
-    $ docker-compose down 
+    $ make cluster
 
-    $ docker-compose up --detach
+    $ make up
 
+### Podman
+
+If you use `podman`, as I am, you will need to enable a few settings:
+
+    $ make found
+
+Inspect the `Makefile` before running its tasks, of course.
+
+# Endpoint
+
+k3d will forward k8s external-ip to `8080` on host.
 
 [Docker Hub](https://hub.docker.com/r/easbarbosa/apito)
 
