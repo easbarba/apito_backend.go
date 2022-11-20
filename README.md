@@ -6,17 +6,15 @@ Evaluate soccer referees' performance.
 
 `Apito` development relies on containers you can start up with:
 
-    $ make cluster
-
-    $ make up
+    $ make cluster && make up
 
 ### Podman
 
-If you use `podman`, as I am, you will need to enable a few settings:
+[podman](podman.io) is available in all major Linux distros repositories, set it up with:
 
-    $ make found
+    $ make podman
 
-Inspect the `Makefile` before running its tasks, of course.
+> Inspect the `Makefile` before running its tasks, of course.
 
 # Endpoint
 
