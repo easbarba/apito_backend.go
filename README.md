@@ -18,7 +18,7 @@ Evaluate soccer referees' performance.
 
 # Endpoint
 
-k3d will forward k8s external-ip to `8080` on host.
+k3d will forward host's `8080` port to kubernetes external-ip.
 
 [Docker Hub](https://hub.docker.com/r/easbarbosa/apito)
 
