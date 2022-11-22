@@ -4,9 +4,9 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func init() {
+const string = ":8080"
 
-}
+func init() {}
 
 func main() {
 	router := gin.Default()
@@ -18,5 +18,5 @@ func main() {
 		})
 	}
 
-	router.Run(":8888")
+	router.Run()
 }
