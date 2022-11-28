@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: apito
-          image:  easbarbosa/apito:0.0.1
+          image:  easbarbosa/apito:backend-0.0.1
           ports:
             - containerPort: 8080
