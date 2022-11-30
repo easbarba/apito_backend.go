@@ -1,3 +1,5 @@
+NAME := apito_backend
+
 deps:
 	go mod download
 
@@ -13,15 +15,15 @@ run:
 test:
 	go test ./...
 
+imports:
+	goimports -l -w .
+
+build:
+	go build -o ${NAME} .
+
 spec:
 	swagger generate spec -o ops/api_spec-${APITO_VERSION}.json
 	swagger serve ops/api_spec-${APITO_VERSION}.json
 
-build:
-	go build -o apito .
-
 watch:
-	CompileDaemon --command="./apito"
-
-imports:
-	goimports -l -w .
+	CompileDaemon --build="go build -o ./${NAME} ." --command="./${NAME}"
