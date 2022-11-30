@@ -1,12 +1,15 @@
 package main
 
 import (
+	"github.com/easbarba/apito/initializers"
 	"github.com/gin-gonic/gin"
 )
 
 const string = ":8080"
 
-func init() {}
+func init() {
+	initializers.LoadEnvVariables()
+}
 
 func main() {
 	router := gin.Default()
