@@ -21,9 +21,9 @@ imports:
 build:
 	go build -o ${NAME} .
 
-spec:
-	swagger generate spec -o ops/api_spec-${APITO_VERSION}.json
-	swagger serve ops/api_spec-${APITO_VERSION}.json
+api:
+	swagger generate spec -o ops/api_spec-${APITO_BACKEND_VERSION}.json
+	swagger serve ops/api_spec-${APITO_BACKEND_VERSION}.json
 
 watch:
 	CompileDaemon --build="go build -o ./${NAME} ." --command="./${NAME}"

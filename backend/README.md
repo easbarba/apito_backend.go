@@ -18,6 +18,8 @@ folder. A Swagger UI is also available:
 
     $ make spec
 
+PS: To generate the correct current api version, do export an environment variable `$APITO_BACKEND_VERSION` returning `.version` value.
+
 ## License
 
 [GPL-v3](https://www.gnu.org/licenses/gpl-3.0.en.html)
