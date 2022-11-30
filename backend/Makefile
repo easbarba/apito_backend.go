@@ -10,6 +10,9 @@ vet:
 run:
 	go run main.go
 
+test:
+	go test ./...
+
 spec:
 	swagger generate spec -o ops/api_spec-${APITO_VERSION}.json
 	swagger serve ops/api_spec-${APITO_VERSION}.json

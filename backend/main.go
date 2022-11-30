@@ -9,6 +9,7 @@ const string = ":8080"
 
 func init() {
 	initializers.LoadEnvVariables()
+	initializers.EnvironmentVariables()
 }
 
 func main() {
