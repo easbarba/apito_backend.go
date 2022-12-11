@@ -1,26 +1,24 @@
-# Apito
+# Apito | Back-end
 
-Evaluate soccer referees' performance.
+## Installation
 
-## Container
+Get all dependencies and install with:
 
-`Apito` development relies on containers you can start up with:
+    $ make deps && make build 
 
-    $ make cluster && make up
+## Ops
 
-### Podman
+### Insomnia 
+Insomnia tasks are available to easy reproducibility of the API endpoints, the
+latest files are at the ops folder.
 
-[podman](podman.io) is available in all major Linux distros repositories, set it up with:
+### OpenAPI
+API specification is generated at every release and can placed at the ops
+folder. A Swagger UI is also available:
 
-    $ make podman
+    $ make spec
 
-> Inspect the `Makefile` before running its tasks, of course.
-
-# Endpoint
-
-k3d will forward host's `8080` port to kubernetes external-ip.
-
-[Docker Hub](https://hub.docker.com/r/easbarbosa/apito)
+PS: To generate the correct current api version, do export an environment variable `$APITO_BACKEND_VERSION` returning `.version` value.
 
 ## License
 
